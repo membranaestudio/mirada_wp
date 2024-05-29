@@ -1,0 +1,42 @@
+.underline, .underline-hover-self
+	display: inline-block
+	position: relative
+	background-image: linear-gradient(currentColor, currentColor)
+	background-position: 0% 100%
+	background-repeat: no-repeat
+	background-size: 0% 1px
+	.arts-split-text__line
+		display: inline-block !important
+		background-image: linear-gradient(currentColor, currentColor)
+		background-position: 0% 100%
+		background-repeat: no-repeat
+		background-size: 0% 1px
+		transition: background-size .4s ease
+.underline-hover-self
+	background-position: 100% 100%
+	background-size: 0% 1px
+	transition: background-size .4s ease, color 0.2s ease-in-out
+	&:hover
+		background-position: 0% 100%
+		background-size: 100% 1px
+		// .arts-split-text__line
+		// 	background-position: 0% 100%
+		// 	background-size: 100% 1px
+.underline-hover
+	&:hover
+		.underline-hover__target
+			background-position: 0% 100%
+			background-size: 100% 1px
+			.arts-split-text__line
+				background-position: 0% 100%
+				background-size: 100% 1px
+
+				
+.underline-hover__target:not(.arts-split-text)
+	display: inline-block
+	position: relative
+	background-image: linear-gradient(currentColor, currentColor)
+	background-position: 100% 100%
+	background-repeat: no-repeat
+	background-size: 0% 1px
+	transition: background-size .4s ease

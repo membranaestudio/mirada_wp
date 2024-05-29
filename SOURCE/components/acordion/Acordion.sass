@@ -1,0 +1,79 @@
+$padding-acordion : var(--padding)
+
+	
+		
+				
+
+
+
+
+button.accordion
+	width: 100%
+	border: none
+	outline: none
+	cursor: pointer
+	+fluid('font-size', 15, 16)
+	font-weight: 500
+	padding: 15px 0px
+	position: relative
+	padding-left: $padding-acordion
+	padding-right: $padding-acordion
+	text-transform: uppercase
+	text-align: left
+	background: transparent
+	display: flex
+	align-items: center
+	&::before
+		content:''
+		position: absolute
+		height: 1px
+		background: #000
+		bottom: 0px
+		width: calc( 100% - ($padding-acordion) * 2  )
+		left: 0
+		right: 0
+		margin: 0 auto
+		display: block
+	&.is-open::before
+		top: -1px
+	.title
+		padding-right: 20px	
+		@media screen and (max-width: $xs)
+			padding-right: 15px
+		
+	.circle
+		border-radius: 10px
+		width: 15px
+		height: 15px	
+		position: absolute
+		
+		opacity: 0	
+
+
+button.accordion:after
+	content: '+'
+	display: block
+	top: 50%
+	transform: translateY(-50%)
+	position: absolute
+	right: 0px
+	font-weight: 200
+	+fluid('font-size', 36, 36)
+	color: #000
+
+button.accordion.is-open:after
+	content: '-'
+	+fluid('font-size', 50, 70)
+
+.accordion-content
+	max-height: 0
+	overflow: hidden
+	transition: max-height 0.2s ease-in-out
+	padding-left: $padding-acordion
+	padding-right: $padding-acordion
+	p:first-child
+		margin-top: 0px
+	
+
+
+
