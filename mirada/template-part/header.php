@@ -1,9 +1,10 @@
 <header class="header header_overlay-logo-left-burger-right js-header header_overlay-logo-left-burger-right"
     id="page-header" data-arts-component-name="Header">
     <!-- Top bar -->
-    <div class="header__bar header__bar_fixed borders-auto-opacity-solid d-flex justify-content-between js-header__bar"
-        data-arts-color-theme="dark" data-arts-header-sticky-class="bg-dark-1">
-        <a class="header__col header__col_left logo" href="<?php echo get_home_url(); ?>">
+    <div class="header__bar header__bar_fixed borders-auto-opacity-solid d-flex justify-content-between js-header__bar" data-arts-header-sticky-class="bg-dark-1">
+
+
+        <a class="header__col header__col_left header__col_center header__col_logo logo" href="<?php echo get_home_url(); ?>">
             <div class="logo__wrapper-img">
                 <img class="logo__img-primary" src="<?php bloginfo("template_url"); ?>/img/logo.svg" width="140"
                     height="72" loading="eager" alt="Mirada Externa" />

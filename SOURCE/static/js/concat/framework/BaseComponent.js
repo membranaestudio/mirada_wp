@@ -226,7 +226,7 @@ class BaseComponent extends BaseAnimation {
 	}
 
 	_svgCircle(el) {
-		const outlines = [...el.querySelectorAll('.svg-circle u')];
+		const outlines = [...el.querySelectorAll('u')];
 		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%"><ellipse cx="50%" cy="50%" rx="48%" ry="48%" fill="none"></svg>`; 
 
 		if (outlines.length && typeof circleSVG === 'string') {
@@ -247,6 +247,7 @@ class BaseComponent extends BaseAnimation {
 			});
 		}
 	}
+
 
 
 
