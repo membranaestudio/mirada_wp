@@ -27,14 +27,19 @@ export default class SVGSwipper extends BaseComponent {
   }
 
 mySwiper() {
-  this.swiper = new Swiper(".mySwiper", {
+  this.swiper = new Swiper(".mySwiperSVG", {
     grabCursor: true,
+    autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   });
 
   this.swiper.on('slideChange', () => {
+    // Referencia al SVG
+    const svgElement = document.getElementById('svg-bnr'); // Asegúrate de reemplazar 'id-del-svg' con el ID real de tu SVG
+    
     // Elimina la clase 'active' de todos los elementos SVG
     const elements = [
       'planificacion-familiar',
@@ -44,7 +49,6 @@ mySwiper() {
       'directorio-familiar',
       'gobierno-familiar',
       'informacion-consolidada',
-
       // Añade aquí los IDs de tus otros elementos SVG
     ];
     elements.forEach(id => {
@@ -53,6 +57,13 @@ mySwiper() {
         element.classList.remove('active');
       }
     });
+
+    // Añade o elimina 'clase-especial' del SVG dependiendo del índice del slide
+    if (this.swiper.activeIndex >= 1) {
+      svgElement.classList.add('active-svg'); // Añade 'clase-especial' desde el slide 2 en adelante
+    } else {
+      svgElement.classList.remove('active-svg'); // Elimina 'clase-especial' en el slide 1
+    }
 
     // Añade la clase 'active' al elemento SVG correspondiente al slide actual
     // Ajustando el índice para saltar el primer slide si es necesario
@@ -75,8 +86,8 @@ mySwiper() {
     { id: 'asesorias-inversiones', slideIndex: 3 },
     { id: 'gestion-legal', slideIndex: 4 },
     { id: 'directorio-familiar', slideIndex: 5 },
-    { id: 'gobierno-familiar', slideIndex: 5 },
-    { id: 'informacion-consolidada', slideIndex: 5 },
+    { id: 'gobierno-familiar', slideIndex: 6 },
+    { id: 'informacion-consolidada', slideIndex: 7 },
     // Agrega más elementos según sea necesario
   ];
 

@@ -27,10 +27,12 @@ export default class SVGSwipper extends BaseComponent {
   }
 
 mySwiper() {
-  this.swiper = new Swiper(".mySwiper", {
+  this.swiper = new Swiper(".mySwiperSVG", {
     grabCursor: true,
+    autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   });
 
@@ -84,8 +86,8 @@ mySwiper() {
     { id: 'asesorias-inversiones', slideIndex: 3 },
     { id: 'gestion-legal', slideIndex: 4 },
     { id: 'directorio-familiar', slideIndex: 5 },
-    { id: 'gobierno-familiar', slideIndex: 5 },
-    { id: 'informacion-consolidada', slideIndex: 5 },
+    { id: 'gobierno-familiar', slideIndex: 6 },
+    { id: 'informacion-consolidada', slideIndex: 7 },
     // Agrega más elementos según sea necesario
   ];
 

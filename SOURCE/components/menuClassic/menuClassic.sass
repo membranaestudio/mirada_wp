@@ -5,14 +5,34 @@
 	font-weight: bold
 	font-size: 14px
 	line-height: 2
+	> li:last-child:before
+		display: none
+	> li:before
+		content: ''
+		position: absolute
+		right: -50%
+		height: 24px
+		width: 1px
+		background: #000
+		display: block
+		top: 50%
+		transform: translateY(-12px)
 	> li
 		position: relative
 		display: inline-block
 		&:not(:last-child)
-			margin-right: 0.25em
+			+fluid('margin-right', var(--menu-min-margin-right), var(--menu-max-margin-right))
 		a
 			display: block
-			padding: 0.5em 1em
+			margin-top: 0.5em
+			margin-bottom: 0.5em
+			text-transform: var(--menu-font-text-transform)
+			font-weight: var(--menu-font-weight)
+			letter-spacing: var(--menu-letter-spacing)
+			color: var(--color-menu-links)
+			@include fluid-type(var(--menu-min-font-size), var(--menu-max-font-size))
+		.active
+			font-weight: 600
 	> li.menu-item-has-children
 		> a
 			&:after
@@ -26,7 +46,7 @@
 				&:after
 					transform: rotate(-90deg)
 	> li:not(.menu-item-has-children)
-		svg
+		//svg
 			position: absolute
 			top: 0
 			left: 0
@@ -46,7 +66,8 @@
 					z-index: 50
 	> li.current-menu-item
 		> a
-			color: var(--color-accent)
+			//color: var(--color-accent)
+			font-weight: bold
 	> li.current-menu-ancestor
 		> a
 			color: var(--color-accent)
@@ -101,3 +122,5 @@
 		pointer-events: auto
 		*
 			pointer-events: auto
+
+

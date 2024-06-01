@@ -1,5 +1,5 @@
-var baseUrl = 'http://localhost:3014/mirada_wp/wp-content/themes/mirada';
-var baseUrl1 = 'https://wordpress-330633-4329964.cloudwaysapps.com/wp-content/themes/bnr';
+var baseUrl = 'https://wordpress-467974-4587011.cloudwaysapps.com/wp-content/themes/mirada';
+var baseUrl1 = 'https://wordpress-467974-4587011.cloudwaysapps.com/wp-content/themes/mirada';
 
 
 window.app = {
@@ -80,7 +80,7 @@ window.app = {
 		 * Mouse cursor follower options
 		 */
 		cursorFollower: {
-			enabled: false,
+			enabled: true,
 			animationDuration: 0.25,
 			hideIFramesHover: true,
 			trailing: 0.2,
@@ -89,7 +89,7 @@ window.app = {
 				includeClass: 'cursor-highlight',
 				excludeClass: 'cursor-no-highlight',
 				scale: '90px',
-				opacity: .2
+				opacity: .4
 			},
 			clickScale: 0.9,
 			matchMedia: '(hover: hover) and (pointer: fine)',
@@ -555,6 +555,10 @@ window.app = {
 		'Acordion': {
 			dependencies: [],
 			file: baseUrl+'/js/components/acordion/Acordion.js'
+		},
+		'WidthHeight': {
+			dependencies: [],
+			file: baseUrl + '/js/components/_base/WidthHeight.js'
 		}
 	},
 

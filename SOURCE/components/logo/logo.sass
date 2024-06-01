@@ -5,7 +5,7 @@
 	vertical-align: middle
 a.logo
 	&:hover
-		opacity: .8
+		//opacity: .8
 .logo__wrapper-img
 	position: relative
 	align-items: center
@@ -13,6 +13,7 @@ a.logo
 	img
 		+trans2
 		display: block
+		+fluid('width', var(--logo-min-width), var(--logo-max-width))
 .logo__text-title
 	display: block
 	font-family: var(--font-secondary)

@@ -23,7 +23,6 @@ export default class ActiveSection extends BaseComponent {
   init() {
     // You can organize it in functions
     this.ActiveSection();
-    this.BlackColor();
   }
 
   ActiveSection() {
@@ -40,10 +39,10 @@ export default class ActiveSection extends BaseComponent {
     }
 
     gsap.utils.toArray('.stage').forEach((stage, index) => {
-      const navLinks = gsap.utils.toArray('.menu-fixed li');
+      const navLinks = gsap.utils.toArray('.menu-classic li a');
       ScrollTrigger.create({
         trigger: stage,
-        start: 'top center+=100',
+        start: 'top center+=0',
         end: () => `+=${stage.clientHeight+getVh()/1000}`,
         toggleClass: {
           targets: navLinks[index],
@@ -55,27 +54,7 @@ export default class ActiveSection extends BaseComponent {
 
   }
 
-BlackColor() {
-  const equipoSection = document.querySelector('#equipo');
-  const menuFixed = document.querySelector('.menu-fixed');
-  ScrollTrigger.create({
-    trigger: equipoSection,
-    start: 'top center',
-    end: 'bottom center',
-    onEnter: () => {
-      menuFixed.classList.add('blackcolor');
-    },
-    onEnterBack: () => {
-      menuFixed.classList.add('blackcolor');
-    },
-    onLeave: () => {
-      menuFixed.classList.remove('blackcolor');
-    },
-    onLeaveBack: () => {
-      menuFixed.classList.remove('blackcolor');
-    }
-  });
-}
+
 
 
 }

@@ -1,7 +1,7 @@
 <header class="header header_overlay-logo-left-burger-right js-header header_overlay-logo-left-burger-right"
     id="page-header" data-arts-component-name="Header">
     <!-- Top bar -->
-    <div class="header__bar header__bar_fixed borders-auto-opacity-solid d-flex justify-content-between js-header__bar" data-arts-header-sticky-class="bg-dark-1">
+    <div class="header__bar header__bar_fixed borders-auto-opacity-solid d-flex justify-content-between js-header__bar" data-arts-header-sticky-class="bg-light-1">
 
 
         <a class="header__col header__col_left header__col_center header__col_logo logo" href="<?php echo get_home_url(); ?>">
@@ -12,9 +12,9 @@
         </a>
 
         <div class="header__col header__col d-none d-lg-flex ms-auto">
-            <ul class="menu-classic">
+            <ul class="menu-classic" data-arts-component-name="ActiveSection">
                 <li>
-                    <a href="#nosotros">nosotros</a>
+                    <a href="#nosotros">Nosotros</a>
                 </li>
                 <li>
                     <a href="#hacemos">Hacemos</a>
@@ -68,111 +68,14 @@
                         </a>
                     </li>
                 </ul>
-                <div class="header__widget js-header__overlay-widget mt-4">
-                    <a class="button button_icon ui-element button_bordered" target="_blank"
-                        href="<?php the_field('acceso_clientes' , 'option'); ?>">
-                        <span class="button__label button__label-normal">
-                            <span class="button__title">Acceso clientes</span>
-                        </span>
-                        <span class="button__label button__label-hover">
-                            <span class="button__title">Acceso clientes</span>
-                        </span>
-                    </a>
-                </div>
+               
             </div>
 
-            <div class="col-lg-4 col-12 text-start header__col-widgets pt-5">
-                <div class="header__widget js-header__overlay-widget">
-                    <div class="header__widget-content h6">
-                        <p>
-                            <a href="tel:<?php the_field('telefono' , 'option'); ?>">
-                                <?php the_field('telefono' , 'option'); ?>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="header__widget-content h6">
-                        <p>
-                            <a href="mailto:<?php the_field('email' , 'option'); ?>">
-                                <?php the_field('email' , 'option'); ?>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="header__widget-content h6">
-                        <p>
-                            <a target="_blank" href="<?php the_field('link_google_maps' , 'option'); ?>">
-                                <?php the_field('direccion' , 'option'); ?>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="header__widget-content h6">
-                        <p>
-                            <?php the_field('santiago' , 'option'); ?>
-                        </p>
-                    </div>
-                    <div class="header__widget-content h6">
-                        <p>
-                            CP: <?php the_field('cp' , 'option'); ?>
-                        </p>
-                    </div>
-
-
-                </div>
-            </div>
+            
         </div>
     </div>
 
-    <?php if ( wp_is_mobile() ) : ?>
-    <?php else : ?>
-    <!-- <div class="menu-fixed" data-arts-component-name="ActiveSection">
-        <ul>
-            <li>
-                <a href="#BNR">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label logo">
-                        <img class="blanco" src="<?php bloginfo("template_url"); ?>/img/BNR_blanco.svg" width="100"
-                            height="39" alt="BNR" />
-                        <img class="negro" src="<?php bloginfo("template_url"); ?>/img/BNR_gris.svg" width="100"
-                            height="39" alt="BNR" />
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#nosotros">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Nosotros</span>
-                </a>
-            </li>
-            <li>
-                <a href="#enfoque">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Enfoque</span>
-                </a>
-            </li>
-            <li>
-                <a href="#soluciones">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Soluciones
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a href="#equipo">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Equipo</span>
-                </a>
-            </li>
-            <li>
-                <a href="#contacto">
-                    <span class="cd-dot"></span>
-                    <span class="cd-label">Contacto</span>
-                </a>
-            </li>
-
-
-
-        </ul>
-    </div> -->
-    <?php endif; ?>
+   
 
 
 

@@ -50,6 +50,28 @@ a
 .italic
 	font-style: italic
 
+.normal
+	font-style: normal
+
+
+.xxl
+	@include fluid-type(var(--display-xxl-min-font-size), var(--display-xxl-max-font-size))
+	font-weight: var(--display-xxl-font-weight)
+	letter-spacing: var(--display-xxl-letter-spacing)
+	line-height: 1.15
+	
+
+.xl
+	@include fluid-type(var(--display-xl-min-font-size), var(--display-xl-max-font-size))
+	font-weight: var(--display-xl-font-weight)
+	letter-spacing: var(--display-xl-letter-spacing)
+
+.xl-fix
+	+fluid('font-size',36, 160)
+
+.h2-fix
+	+fluid('font-size',36, 48)	
+	
 h1, h2, h3
 	+fluid('margin-top', 16, 24)
 	+fluid('margin-bottom', 16, 24)
@@ -57,8 +79,12 @@ h4, h5, h6
 	+fluid('margin-top', 16, 24)
 	+fluid('margin-bottom', 16, 24)
 
-.h5
-	text-transform: none	
+h6, .h6
+	text-transform: uppercase
+
+p
+	@include fluid-type(var(--paragraph-min-font-size), var(--paragraph-max-font-size))
+	line-height: 1.5
 
 blockquote
 	display: block
@@ -90,3 +116,9 @@ blockquote
 		height: auto
 		margin-top: 4px
 		fill: currentColor
+
+
+.font-primary
+	font-family: var(--font-primary)
+
+	

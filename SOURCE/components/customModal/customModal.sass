@@ -6,7 +6,7 @@
 	width: 100vw
 	height: 100%
 	display: none
-	background: var(--color-light-1)
+	background: var(--color-dark-1)
 	//backdrop-filter: blur(6px)
 	overflow-y: auto
 	.container
@@ -23,7 +23,7 @@
 		.bg-content-white	
 			position: relative
 			width: 100%
-			+fluid('padding-top', 40, 100)
+			+fluid('padding-top', 20, 100)
 			+fluid('padding-bottom', 40, 60)
 
 
@@ -41,12 +41,12 @@
 	.close-btn
 		position: absolute
 		font-size: 3rem
-		right: 20px
-		top: 20px
+		+fluid('right', 20, 30)
+		+fluid('top', 20, 30)
 		background: none
 		border: none
 		appearance: none
-		color: var(--color-dark-2)
+		color: var(--color-light-1)
 		z-index: 99
 		cursor: pointer
 		@media screen and (max-width: $md)
@@ -71,29 +71,5 @@
 	to
 		opacity: 0
 
-@keyframes set-translate
-	from
-		transform: translate(0)
-	to
-		transform: translate(var(--offset))
 
 
-
-
-.modal-line
-	position: relative
-	+fluid('padding-left', 20, 110)
-	&::before
-		content: ''
-		+fluid('left', 15, 70)
-		position: absolute
-		height: calc( 100% + 120px)
-		+fluid('top', -80, -120)
-		+fluid('width', 5, 7)
-		background: red
-		border-radius: 5px
-		background: var(--color-brown)
-		@media screen and (max-width: $sm)
-			top: 0px
-			height: 100%
-	
