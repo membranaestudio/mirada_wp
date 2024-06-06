@@ -2,7 +2,7 @@
 +min-screen-lg
 	#nosotros
 		margin-top: 0
-	
+
 #nosotros
 	.col-top
 		position: relative
@@ -11,7 +11,6 @@
 		@media screen and (max-width: $lg)
 			top: 0
 			margin-bottom: 0
-
 
 /* CIRCLES */ 
 
@@ -33,14 +32,12 @@
 	40%
 		transform: translateY(15px)
 	60%
-		transform: translateY(10px)	
-
-
+		transform: translateY(10px)
 
 .circles-wrapper
 	.circle
 		border-radius: 50%
-		border: 2px solid #000	
+		border: 2px solid #000
 		display: flex
 		width: 100%
 		justify-content: center
@@ -48,14 +45,15 @@
 		text-align: center
 		+fluid('padding', 10, 40)
 		+trans1
-		&:hover
+	.hovered
+		.circle
 			background: var(--color-yellow)
 			border-color: var(--color-yellow)
+			transform: scale(1.2)
 			+trans1
 	.circle
 		margin-bottom: 1.5vw
-	
-	
+
 
 +min-screen-md
 	.item-1
@@ -71,26 +69,20 @@
 		.item-3
 			margin-top: 100px
 		.circle
-			margin-bottom: 20px	
-		.col-6:nth-child(3) 	
+			margin-bottom: 20px
+		.col-6:nth-child(3)
 			position: relative
 			top: -100px
 
-+max-screen-sm	
++max-screen-sm
 	.circles-wrapper
 		max-width: 100%
-
 
 /* ARROW */ 
 .arrow-svg
 	+fluid('width', 60, 300)
 	+fluid('margin-right', 20, 80)
 
-
-
-
-
-	
 /* EQUIPO */ 
 .equipo
 	cursor: pointer

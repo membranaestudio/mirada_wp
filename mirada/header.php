@@ -14,7 +14,6 @@
   <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_url"); ?>/css/vendor.css" />
   <!-- Template main styles-->
   <link rel="stylesheet" type="text/css" href="<?php bloginfo("template_url"); ?>/css/main.css" />
-  <!-- Favicons & App Icons -->
   <?php wp_head();?>
 </head>
 

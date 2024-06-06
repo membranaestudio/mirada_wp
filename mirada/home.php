@@ -86,7 +86,8 @@ Template Name: Home
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<div class="max-lg-mt-0 mt-small content svg-circle-2" data-arts-split-text-preset="animatedLines" style="max-width: 400px">
+						<div class="max-lg-mt-0 mt-small content svg-circle-2"
+							data-arts-split-text-preset="animatedLines" style="max-width: 400px">
 							<h1 class="mt-0"><u>Hacemos</u></h1>
 							<p><?php the_field('descripcion_hacemos'); ?></p>
 						</div>
@@ -95,14 +96,14 @@ Template Name: Home
 					</div>
 					<div class="col-lg-6 mt-4 mt-lg-0">
 						<div style="max-width: 540px; margin: 0 auto">
-							<a href="#herramientas" class="circle-arrow" data-arts-os-animation-name="animatedJumpScale" data-arts-cursor-follower-target="{background: 'transparent', magnetic: 0.25}">
+							<div class="circle-arrow" data-arts-os-animation-name="animatedJumpScale">
 								<svg width="30" height="84" viewBox="0 0 30 84" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M13.5858 83.4142C14.3668 84.1953 15.6332 84.1953 16.4142 83.4142L29.1421 70.6863C29.9232 69.9052 29.9232 68.6389 29.1421 67.8579C28.3611 67.0768 27.0948 67.0768 26.3137 67.8579L15 79.1716L3.68629 67.8579C2.90524 67.0768 1.63891 67.0768 0.857862 67.8579C0.0768136 68.6389 0.0768135 69.9052 0.857862 70.6863L13.5858 83.4142ZM13 -1.76728e-07L13 82L17 82L17 1.76728e-07L13 -1.76728e-07Z"
 										fill="black" />
 								</svg>
-								</a>
+							</div>
 
 						</div>
 
@@ -117,7 +118,7 @@ Template Name: Home
 			data-arts-os-animation="true" data-arts-color-theme="light">
 			<div class="container py-small">
 
-									
+
 				<div class="row">
 					<div class="col-12">
 						<div data-arts-split-text-preset="animatedLines" style="max-width: 400px">
@@ -139,16 +140,19 @@ Template Name: Home
 									fill="#2142FF" />
 							</svg>
 
-							<div class="content svg-line blue" data-arts-split-text-preset="animatedChars">
+							<div class="content svg-line-3" data-arts-split-text-preset="animatedChars">
 								<h1 class="xl m-0"> <u><?php the_field('linea_2_herramienta'); ?></u>
-									<span class="d-none d-md-inline"> <?php the_field('linea_2sin_herramientas'); ?></span></h1>
+									<span class="d-none d-md-inline">
+										<?php the_field('linea_2sin_herramientas'); ?></span></h1>
 							</div>
 						</div>
 
 
 						<div data-arts-component-name="Content" data-arts-os-animation="true">
 							<div class="content svg-sun" data-arts-split-text-preset="animatedChars">
-								<h1 class="xl m-0"><span class="d-md-none"><?php the_field('linea_2sin_herramientas'); ?></span> <?php the_field('linea_3_herramienta'); ?></h1>
+								<h1 class="xl m-0"><span
+										class="d-md-none"><?php the_field('linea_2sin_herramientas'); ?></span>
+									<?php the_field('linea_3_herramienta'); ?></h1>
 							</div>
 						</div>
 
@@ -164,15 +168,16 @@ Template Name: Home
 					</div>
 				</div>
 
-				<div class="row circles-wrapper g-0" data-arts-component-name="WidthHeight" data-arts-os-animation="true" >
+				<div class="row circles-wrapper pointer-events-none g-0" data-arts-component-name="WidthHeight"
+					data-arts-os-animation="true">
 
 					<div class="col-6 col-lg-3">
-						<div class="item-1" data-arts-os-animation-name="animatedJumpScale">
-								<div class="circle item-with-height">
-									<h3><?php the_field('circulo_1'); ?></h3>
-								</div>
+						<div class="item-1 item">
+							<div class="circle item-with-height">
+								<h3><?php the_field('circulo_1'); ?></h3>
+							</div>
 						</div>
-						<div class="item-2" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-2 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_2'); ?></h3>
 							</div>
@@ -180,12 +185,12 @@ Template Name: Home
 					</div>
 
 					<div class="col-6 col-lg-3">
-						<div class="item-3" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-3 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_3'); ?></h3>
 							</div>
 						</div>
-						<div class="item-4" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-4 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_4'); ?></h3>
 							</div>
@@ -193,12 +198,12 @@ Template Name: Home
 					</div>
 
 					<div class="col-6 col-lg-3">
-						<div class="item-5" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-5 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_5'); ?></h3>
 							</div>
 						</div>
-						<div class="item-6" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-6 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_6'); ?></h3>
 							</div>
@@ -206,12 +211,12 @@ Template Name: Home
 					</div>
 
 					<div class="col-6 col-lg-3">
-						<div class="item-7" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-7 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_7'); ?></h3>
 							</div>
 						</div>
-						<div class="item-8" data-arts-os-animation-name="animatedJumpScale">
+						<div class="item-8 item">
 							<div class="circle item-with-height">
 								<h3><?php the_field('circulo_8'); ?></h3>
 							</div>
@@ -224,26 +229,27 @@ Template Name: Home
 		</div>
 
 		<!-- POR QUE -->
-		<div class="section my-medium top-fix" data-arts-component-name="Content"
-			data-arts-os-animation="true" data-arts-color-theme="light">
+		<div class="section my-medium top-fix" data-arts-component-name="Content" data-arts-os-animation="true"
+			data-arts-color-theme="light">
 			<div class="container">
 				<div class="row">
 					<div
 						class="col-md-6 max-md-pt-0 pt-small order-md-2 pb-5 pb-md-0 d-md-flex flex-md-column justify-content-md-between">
-						<div class="content svg-circle" data-arts-split-text-preset="animatedLines" 
+						<div class="content svg-circle" data-arts-split-text-preset="animatedLines"
 							style="max-width: 580px; margin-left: auto; margin-right: auto">
-							<h1 class="fix-svg-1"><u class="italic">¿Por qué</u> <br><span class="font-primary h2 fw-700">Mirada Externa</span>?</h1>
+							<h1 class="fix-svg-1"><u class="italic">¿Por qué</u> <br><span
+									class="font-primary h2 fw-700">Mirada Externa</span>?</h1>
 							<?php the_field('descripcion_mirada'); ?>
 						</div>
 						<div class="d-flex justify-content-center my-4">
-							<a href="#ayudamos" class="circle-arrow" data-arts-os-animation-name="animatedJumpScale" data-arts-cursor-follower-target="{background: 'transparent', magnetic: 0.25}">
+							<div class="circle-arrow" data-arts-os-animation-name="animatedJumpScale">
 								<svg width="30" height="84" viewBox="0 0 30 84" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M13.5858 83.4142C14.3668 84.1953 15.6332 84.1953 16.4142 83.4142L29.1421 70.6863C29.9232 69.9052 29.9232 68.6389 29.1421 67.8579C28.3611 67.0768 27.0948 67.0768 26.3137 67.8579L15 79.1716L3.68629 67.8579C2.90524 67.0768 1.63891 67.0768 0.857862 67.8579C0.0768136 68.6389 0.0768135 69.9052 0.857862 70.6863L13.5858 83.4142ZM13 -1.76728e-07L13 82L17 82L17 1.76728e-07L13 -1.76728e-07Z"
 										fill="black" />
 								</svg>
-							</a>
+								</div>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -265,8 +271,8 @@ Template Name: Home
 							</div>
 						</div>
 					</div>
-					
-					
+
+
 
 				</div>
 			</div>
@@ -274,7 +280,8 @@ Template Name: Home
 
 
 		<!-- AYUDANOS  -->
-		<div id="ayudamos" class="section py-xlarge bg-dark-1" data-arts-component-name="Content" data-arts-os-animation="true">
+		<div id="ayudamos" class="section py-xlarge bg-dark-1" data-arts-component-name="Content"
+			data-arts-os-animation="true">
 			<div class="container">
 				<div data-arts-component-name="Content" data-arts-os-animation="true">
 					<div class="content svg-sun-2" data-arts-split-text-preset="animatedChars">
@@ -291,7 +298,7 @@ Template Name: Home
 					<h1 data-arts-split-text-preset="animatedChars" class="xl-fix m-0">a ver el bosque</h1>
 				</div>
 				<div data-arts-component-name="Content" data-arts-os-animation="true">
-					<div class="content svg-line" data-arts-split-text-preset="animatedChars">
+					<div class="content svg-line-2" data-arts-split-text-preset="animatedChars">
 						<h1 class="xl-fix m-0"> <u>y tambien los árboles</u></h1>
 					</div>
 				</div>
@@ -308,9 +315,9 @@ Template Name: Home
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 d-flex align-items-center pb-5 pb-md-0">
-						<div class="content svg-circle" data-arts-split-text-preset="animatedLines"
-							>
-							<h1 class="d-flex"><span class="fix-svg-2">Nuestra</span> <u class="italic">historia</u></h1>
+						<div class="content svg-circle" data-arts-split-text-preset="animatedLines">
+							<h1 class="d-flex"><span class="fix-svg-2">Nuestra</span> <u class="italic fix-svg-3">historia</u>
+							</h1>
 							<?php the_field('descripcion_historia'); ?>
 						</div>
 					</div>
@@ -410,7 +417,7 @@ Template Name: Home
 						</div>
 					</div>
 
-					
+
 
 					<?php  endwhile; ?>
 					<?php endif; ?>
@@ -424,7 +431,7 @@ Template Name: Home
 
 
 
-			
+
 			</div>
 
 
@@ -443,7 +450,7 @@ Template Name: Home
 
 				</div>
 				<div class="row mt-xsmall g-3 g-lg-4">
-				
+
 					<?php if( have_rows('equipo') ): ?>
 					<?php while ( have_rows('equipo') ) : the_row(); ?>
 

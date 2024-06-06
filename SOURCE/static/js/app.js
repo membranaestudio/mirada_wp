@@ -1,4 +1,4 @@
-var baseUrl = 'https://wordpress-467974-4587011.cloudwaysapps.com/wp-content/themes/mirada';
+var baseUrl = 'http://localhost:3004/mirada_wp/wp-content/themes/mirada';
 var baseUrl1 = 'https://wordpress-467974-4587011.cloudwaysapps.com/wp-content/themes/mirada';
 
 
@@ -17,7 +17,7 @@ window.app = {
 					'data-arts-color-theme': 'data-arts-header-sticky-color-theme',
 					'class': 'data-arts-header-sticky-class'
 				},
-				toggleReveal: true,
+				toggleReveal: false,
 				toggleStickyClass: 'header__bar_sticky',
 				toggleRevealingClass: false,
 				toggleScrollingDownClass: 'header__bar_scrolling-down'
