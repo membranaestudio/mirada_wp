@@ -37,46 +37,6 @@ window.app = {
 		},
 
 		/**
-		 * Options for components that use virtual scroll
-		 */
-		virtualScroll: {
-			easing: {
-				mouse: 0.1,
-				touch: 0.06
-			},
-			speed: {
-				mouse: 1,
-				touch: 2.5
-			},
-			maxDelta: {
-				mouse: 240,
-				touch: 180
-			},
-			snapDelay: {
-				mouse: 0.05,
-				touch: 0.6
-			}
-		},
-
-		/**
-		 * Loading screen options
-		 */
-		preloader: {
-			enabled: false,
-			timeScale: 1,
-			loadingRotation: 90,
-			loadingSteps: [
-				[20, 40],
-				[50, 80],
-				[100, 100]
-			],
-			finalDelay: 0.4,
-			finalOffset: '<20%',
-			finalRotation: 180,
-			toggleLoadClass: 'preloader_loaded',
-		},
-
-		/**
 		 * Mouse cursor follower options
 		 */
 		cursorFollower: {
@@ -102,97 +62,6 @@ window.app = {
 		 */
 		cursorLoading: false,
 
-		/**
-		 * AJAX navigation options
-		 */
-		ajax: {
-			enabled: false,
-			transitionDuration: 2.0,
-			transitionEase: 'expo.inOut',
-			timeout: 10000, // give max. 10s for a transition to play and force hard-refresh if transition takes longer
-			preventRules: '', // Selectors of the elements to exclude them from AJAX transitions
-			updateNodesAttributes: '',
-			updateScriptNodes: '',
-			loadMissingScripts: true,
-			loadMissingStyles: true,
-			removeMissingStyles: true,
-			evalInlineContainerScripts: false
-		},
-
-		/**
-		 * Photoswipe lightbox
-		 */
-		gallery: {
-			itemsSelector: 'a[href]:not(a[href="#"]):not(a[href*="#"])',
-			bgOpacity: 1.0,
-			colorTheme: 'dark',
-			initialZoomLevel: 'fit',
-			secondaryZoomLevel: 2.5,
-			maxZoomLevel: 4,
-			// "X" (close) button
-			close: {
-				custom: true,
-				label: false,
-				labelHover: false,
-				cursor: {
-					magnetic: 0.25,
-					scale: 1.3,
-					hideNative: false,
-					color: 'var(--color-accent-dark-theme)'
-				}
-			},
-			// Prev & next gallery arrows
-			arrows: {
-				custom: true,
-				cursor: {
-					scale: 'current',
-					magnetic: 0.25,
-					color: 'var(--color-accent-dark-theme)'
-				}
-			},
-			// Images counter in gallery (e.g. "2 / 7")
-			counter: {
-				custom: true
-			},
-			// Images captions grabbed from 'data-caption' attribute on <a> link
-			// or from "alt" attribute of the currently active image
-			captions: true,
-			// Media loading indicator
-			preloader: {
-				custom: true
-			},
-			// "Zoom" button in top bar
-			zoom: false,
-		},
-
-		/**
-		 * Auto transition to the next portfolio page
-		 * at the bottom
-		 */
-		autoScrollNext: {
-			enabled: false,
-			webGL: {
-				enabled: false,
-				vertices: 16,
-			},
-			onSceneProgress: {
-				speed: 8,
-				amplitude: 4,
-				segments: 4,
-				scalePlane: 1.1,
-				scaleTexture: 1,
-			},
-			onSceneIdle: {
-				speed: 4,
-				amplitude: 2,
-				segments: 4,
-				scalePlane: 1,
-				scaleTexture: 1.2,
-			},
-			scrollingClass: 'auto-scroll-next_scrolling',
-			completeClass: 'auto-scroll-next_complete',
-			toggleHeaderVisibility: true
-		},
 
 		/**
 		 * Animations options
@@ -575,7 +444,6 @@ window.app = {
 		}
 	},
 
-
 	loadLazy: () => {
 		return new Promise((resolve) => {
 			app.lazy = new LazyLoad({
@@ -613,7 +481,6 @@ window.app = {
 		return ScrollTrigger.isTouch !== 1 && app.utilities.isEnabledOption(app.options.smoothScroll);
 	},
 
-	
 	loadHeader: () => {
 		const el = document.querySelector('#page-header');
 
@@ -687,7 +554,29 @@ window.app = {
 		return app.utilities.isEnabledOption(app.options.cursorFollower) && !!app.options.cursorFollower.matchMedia;
 	},
 
+	loadPreloader() {
+		return new Promise((resolve) => {
+			const el = document.querySelector('#js-preloader');
 
+			if (el) {
+				if (app.shouldLoadPreloader()) {
+					app.componentsManager.loadComponent({
+						el,
+						loadInnerComponents: true,
+						parent: null,
+						storage: app.componentsManager.instances.persistent,
+						options: app.options.preloader,
+					}).then(() => resolve(true));
+				} else {
+					el.style.display = 'none';
+
+					resolve(true);
+				}
+			} else {
+				resolve(true);
+			}
+		});
+	},
 
 	shouldLoadPreloader() {
 		return app.utilities.isEnabledOption(app.options.preloader);
