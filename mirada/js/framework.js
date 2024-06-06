@@ -2121,6 +2121,7 @@ class BaseComponent extends BaseAnimation {
 <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="574.518" height="7.929" viewBox="0 0 574.518 7.929">
   <path id="Trazado_22" data-name="Trazado 22" class="cls-1" d="M867.15,81.563l212.111-2.793q31.909-.421,63.817-.84c99.509-1.312,199.075-2.622,298.509,1.429" transform="translate(-867.13 -75.134)"/>
 </svg>
+
 `;
 
 		if (outlines.length && typeof circleSVG === 'string') {
