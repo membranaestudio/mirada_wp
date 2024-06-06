@@ -1858,11 +1858,9 @@ class BaseComponent extends BaseAnimation {
 
 	_svgCircle(el) {
 		const outlines = [...el.querySelectorAll('.svg-circle u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="305.216" height="93.886" viewBox="0 0 305.216 93.886">
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="305.216" height="93.886" viewBox="0 0 305.216 93.886">
   <path id="Trazado_21" data-name="Trazado 21" class="cls-1" d="M773.278,55.441A327.317,327.317,0,0,0,653.845,71.493c-10.254,3.39-20.626,7.465-28.476,14.881s-12.695,18.921-9.493,29.234c3.893,12.536,17.7,19.053,30.542,21.765,9.97,2.1,20.177,2.817,30.347,3.432,69.88,4.225,141.559,3.85,207.812-18.767,10.632-3.63,21.675-8.275,28.171-17.442,3.122-4.4,5.016-9.932,4.033-15.241-1.723-9.317-11.215-14.87-19.989-18.445C857.756,55,814.541,53.718,772.4,52.649c-18.767-.477-37.542-.953-56.311-.594" transform="translate(-613.354 -50.456)"/>
 </svg>
-
 `;
 
 		if (outlines.length && typeof circleSVG === 'string') {
@@ -1886,8 +1884,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgCircle2(el) {
 		const outlines = [...el.querySelectorAll('.svg-circle-2 u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="377.614" height="168.189" viewBox="0 0 377.614 168.189">
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="377.614" height="168.189" viewBox="0 0 377.614 168.189">
   <path id="Trazado_20" data-name="Trazado 20" class="cls-1" d="M348.263,179.829a1119.285,1119.285,0,0,1,121.286,2.165c11.174.808,22.366,1.784,33.563,1.409,13.9-.465,27.643-3,41.32-5.535l35.688-6.6c17.107-3.167,34.686-6.512,49.393-15.808s26.063-26.074,23.725-43.315c-1.665-12.3-9.992-22.912-20.119-30.087s-22-11.4-33.744-15.419c-31.793-10.877-64.166-20.936-97.6-24.258-37.427-3.719-75.153,1.1-112.282,7.108C353.3,55.339,315.89,62.918,286.5,84.846c-2.991,2.232-6.034,4.822-7.1,8.4-1.848,6.216,2.963,12.391,8.027,16.442,10.52,8.419,23.363,13.306,36,17.99,100.821,37.378,204.529,70.435,311.744,78.6" transform="translate(-277.444 -39.585)"/>
 </svg>
 `;
@@ -1913,8 +1910,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgLine(el) {
 		const outlines = [...el.querySelectorAll('.svg-line u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="574.518" height="7.929" viewBox="0 0 574.518 7.929">
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="574.518" height="7.929" viewBox="0 0 574.518 7.929">
   <path id="Trazado_22" data-name="Trazado 22" class="cls-1" d="M867.15,81.563l212.111-2.793q31.909-.421,63.817-.84c99.509-1.312,199.075-2.622,298.509,1.429" transform="translate(-867.13 -75.134)"/>
 </svg>
 `;
@@ -1999,8 +1995,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgSun(el) {
 		const outlines = [...el.querySelectorAll('.svg-sun u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="138.36" height="160" viewBox="0 0 138.36 160">
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="138.36" height="160" viewBox="0 0 138.36 160">
   <g id="Grupo_1" data-name="Grupo 1" transform="translate(1.396 0.969)">
     <path id="Trazado_2" data-name="Trazado 2" class="cls-1" d="M-1015.542,157.327c12.916-12.036,15.933-31.561,27.337-45.039" transform="translate(1083.483 -112.288)"/>
     <path id="Trazado_3" data-name="Trazado 3" class="cls-1" d="M-1006.832,151.338a473.026,473.026,0,0,1,53.25,19.551" transform="translate(1089.946 -83.31)"/>
@@ -2008,7 +2003,6 @@ class BaseComponent extends BaseAnimation {
     <path id="Trazado_5" data-name="Trazado 5" class="cls-1" d="M-1029.1,176.508a102.906,102.906,0,0,0-25.445,37.355" transform="translate(1054.542 -64.632)"/>
   </g>
 </svg>
-
 `;
 
 		if (outlines.length && typeof circleSVG === 'string') {
@@ -2035,8 +2029,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgSun2(el) {
 		const outlines = [...el.querySelectorAll('.svg-sun-2 u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="137.013" height="164.413" viewBox="0 0 137.013 164.413">
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="137.013" height="164.413" viewBox="0 0 137.013 164.413">
   <g id="Grupo_2" data-name="Grupo 2" transform="translate(1.448 0.392)">
     <path id="Trazado_6" data-name="Trazado 6" class="cls-1" d="M-707.119,71.579c-2.568-17.466-16.922-31.044-21.539-48.085" transform="translate(728.658 -23.494)"/>
     <path id="Trazado_7" data-name="Trazado 7" class="cls-1" d="M-700.486,65.359a472.664,472.664,0,0,1,46.339-32.716" transform="translate(749.564 -16.705)"/>
@@ -2070,9 +2063,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgSun3(el) {
 		const outlines = [...el.querySelectorAll('.svg-sun-3 u')];
-		const circleSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="179.638" height="194.738" viewBox="0 0 179.638 194.738">
-
+		const circleSVG = `<svg xmlns="http://www.w3.org/2000/svg" width="179.638" height="194.738" viewBox="0 0 179.638 194.738">
   <g id="Grupo_6" data-name="Grupo 6" transform="translate(0.64 0.185)">
     <path id="Trazado_10" data-name="Trazado 10" class="cls-1" d="M-504.828,80.031a466.729,466.729,0,0,1,3.272-73.857" transform="translate(589.165 -6.174)"/>
     <path id="Trazado_11" data-name="Trazado 11" class="cls-1" d="M-491.015,66.071l47.238-32.183c6.81-4.639,14.8-9.5,22.757-7.359" transform="translate(599.628 8.544)"/>
@@ -2081,7 +2072,6 @@ class BaseComponent extends BaseAnimation {
     <path id="Trazado_15" data-name="Trazado 15" class="cls-1" d="M-539.89,12.243a327.157,327.157,0,0,1,43.8,59.927" transform="translate(563.359 -1.67)"/>
   </g>
 </svg>
-
 `;
 
 		if (outlines.length && typeof circleSVG === 'string') {
@@ -2108,8 +2098,7 @@ class BaseComponent extends BaseAnimation {
 
 	_svgBoth(el) {
 		const outlines = [...el.querySelectorAll('.svg-both u')];
-		const circleSVG = `
-<svg class="svg-1" xmlns="http://www.w3.org/2000/svg" width="137.013" height="164.413" viewBox="0 0 137.013 164.413">
+		const circleSVG = `<svg class="svg-1" xmlns="http://www.w3.org/2000/svg" width="137.013" height="164.413" viewBox="0 0 137.013 164.413">
   <g id="Grupo_2" data-name="Grupo 2" transform="translate(1.448 0.392)">
     <path id="Trazado_6" data-name="Trazado 6" class="cls-1" d="M-707.119,71.579c-2.568-17.466-16.922-31.044-21.539-48.085" transform="translate(728.658 -23.494)"/>
     <path id="Trazado_7" data-name="Trazado 7" class="cls-1" d="M-700.486,65.359a472.664,472.664,0,0,1,46.339-32.716" transform="translate(749.564 -16.705)"/>
@@ -2117,11 +2106,9 @@ class BaseComponent extends BaseAnimation {
     <path id="Trazado_9" data-name="Trazado 9" class="cls-1" d="M-698.577,92.965a102.931,102.931,0,0,0,16.288,42.162" transform="translate(750.98 28.058)"/>
   </g>
 </svg>
-
 <svg class="svg-2" xmlns="http://www.w3.org/2000/svg" width="574.518" height="7.929" viewBox="0 0 574.518 7.929">
   <path id="Trazado_22" data-name="Trazado 22" class="cls-1" d="M867.15,81.563l212.111-2.793q31.909-.421,63.817-.84c99.509-1.312,199.075-2.622,298.509,1.429" transform="translate(-867.13 -75.134)"/>
 </svg>
-
 `;
 
 		if (outlines.length && typeof circleSVG === 'string') {

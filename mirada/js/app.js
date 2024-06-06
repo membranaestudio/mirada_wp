@@ -1,4 +1,4 @@
-var baseUrl = 'http://localhost:3004/mirada_wp/wp-content/themes/mirada';
+var baseUrl = 'http://localhost:3000/mirada_wp/wp-content/themes/mirada';
 var baseUrl1 = 'https://wordpress-467974-4587011.cloudwaysapps.com/wp-content/themes/mirada';
 
 
@@ -222,19 +222,7 @@ window.app = {
 	// Inner content container
 	contentEl: document.querySelector('#page-wrapper__content'),
 
-	initAJAX: () => {
-		/**
-		 * The code you put here will be executed
-		 * on page load AND on each AJAX transition
-		 */
-	},
-
-	initOnce: () => {
-		/**
-		 * The code you put here will be executed only once
-		 * on page load.
-		 */
-	},
+	
 
 	init: () => {
 		app.checkIsLocalFile();
@@ -255,14 +243,11 @@ window.app = {
 			.then(() => app.utilities.scrollToAnchorFromHash())
 			.then(() => Promise.all([
 				app.setLoaded(),
-				app.loadAJAX(),
 				app.loadCursor()
 			]))
 			.then(() => {
 				app.loadLazy();
 				app.initOnce();
-				app.initAJAX();
-				app.loadGUI();
 				ScrollTrigger.refresh();
 			});
 	},
@@ -296,10 +281,6 @@ window.app = {
 	utilities: new Utilities(),
 
 	animations: new Animations(),
-
-	forms: new Forms(),
-
-	hoverEffect: new HoverEffect(),
 
 	assetsManager: new AssetsManager(),
 
@@ -399,7 +380,7 @@ window.app = {
 			file: baseUrl+'/js/components/header/Header.js'
 		},
 		'MenuOverlay': {
-			dependencies: ['arts-infinite-list'],
+			dependencies: [],
 			file: baseUrl+'/js/components/menuOverlay/MenuOverlay.js'
 		},
 		'MenuClassic': {
@@ -594,68 +575,6 @@ window.app = {
 		}
 	},
 
-	loadGUI: () => {
-		if (!app.shouldLoadGUI()) {
-			return;
-		}
-
-		let el = document.querySelector('.js-gui');
-		let mq;
-
-		if (!el) {
-			el = document.createElement('div');
-			el.classList.add('js-gui');
-
-			document.body.appendChild(el);
-		}
-
-		if (app.shouldLoadGUI()) {
-			mq = window.matchMedia('(min-width: 992px)');
-
-			if (mq.matches) {
-				return load({
-					matches: true
-				});
-			} else {
-				if (typeof mq.addEventListener === 'function') {
-					mq.addEventListener('change', load);
-				} else {
-					mq.addListener(load);
-				}
-			}
-		} else {
-			return load({
-				matches: true
-			});
-		}
-
-		function load(event) {
-			if (event && event.matches) {
-				if (mq) {
-					if (typeof mq.removeEventListener === 'function') {
-						mq.removeEventListener('change', this);
-					} else {
-						mq.removeListener(this);
-					}
-				}
-
-				return app.componentsManager.loadComponent({
-					el,
-					loadInnerComponents: false,
-					parent: null,
-					storage: app.componentsManager.instances.persistent,
-					name: 'Gui',
-					options: app.options.gui,
-				});
-			}
-		}
-	},
-
-	shouldLoadGUI: () => {
-		const currentURL = new URL(window.location.href);
-
-		return currentURL.searchParams.has('gui') && currentURL.searchParams.get('gui') !== 'false';
-	},
 
 	loadLazy: () => {
 		return new Promise((resolve) => {
@@ -694,29 +613,9 @@ window.app = {
 		return ScrollTrigger.isTouch !== 1 && app.utilities.isEnabledOption(app.options.smoothScroll);
 	},
 
-	loadAJAX() {
-		if (app.shoudLoadAJAX()) {
-			const el = document.querySelector('[data-barba="wrapper"]');
+	
 
-			// Map "cursorLoading" option
-			if (!!app.options.cursorLoading && !app.options.ajax.cursorLoading) {
-				app.options.ajax.cursorLoading = app.options.cursorLoading;
-			}
 
-			return app.componentsManager.loadComponent({
-				el,
-				loadInnerComponents: false,
-				parent: null,
-				storage: app.componentsManager.instances.persistent,
-				name: 'AJAX',
-				options: app.options.ajax,
-			});
-		}
-	},
-
-	shoudLoadAJAX() {
-		return app.utilities.isEnabledOption(app.options.ajax);
-	},
 
 	loadHeader: () => {
 		const el = document.querySelector('#page-header');

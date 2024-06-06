@@ -44,7 +44,7 @@
     <div class="header__wrapper-overlay-menu js-header__overlay-container bg-dark-1" data-arts-color-theme="dark">
         <div class="header__overlay-inner js-header__overlay-container-inner">
             <div class="col-lg-8 col-12 header__col-overlay pb-5">
-                <ul class="menu-overlay" data-arts-component-name="MenuOverlay" data-arts-component-options="{}">
+                <ul class="menu-overlay">
                 
                     <li class="menu-item-has-children">
                         <a class="overlay-menu-item" href="#nosotros" data-arts-split-text-preset="overlayMenuItem">
